@@ -16,7 +16,7 @@
     },
     methods: {
       getHomePage() {
-        axios.get(`patrick-baessler.de/wp-json/better-rest-endpoints/v1/page/home`)
+        axios.get(`http://patrick-baessler.de/wp-json/better-rest-endpoints/v1/page/home`)
           .then(response => {
             this.home = response.data
           })

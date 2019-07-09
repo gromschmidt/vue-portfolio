@@ -20,7 +20,7 @@
     },
     methods: {
       getPost() {
-        axios.get(`patrick-baessler.de/wp-json/better-rest-endpoints/v1/post/${this.id}?acf=false&yoast=false`)
+        axios.get(`http://patrick-baessler.de/wp-json/better-rest-endpoints/v1/post/${this.id}?acf=false&yoast=false`)
           .then(response => {
             
             this.post = response.data
