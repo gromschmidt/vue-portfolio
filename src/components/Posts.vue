@@ -41,7 +41,7 @@
     methods: {
       getPosts() {
         axios.get(
-            `http://patrick-baessler.de/wp-json/better-rest-endpoints/v1/posts?page=${this.currentPage}&acf=false&content=false&yoast=false`
+            `https://patrick-baessler.de/wp-json/better-rest-endpoints/v1/posts?page=${this.currentPage}&acf=false&content=false&yoast=false`
             )
           .then(response => {
             this.totalPages = response.headers["x-wp-totalpages"]
