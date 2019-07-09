@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-if="home" v-html="home.content"></div>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  import axios from 'axios';
+  export default {
+    name: 'home',
+    data() {
+      return {
+        home: null
+      }
+    },
+    methods: {
+      getHomePage() {
+        axios.get(`http://patrick-baessler.de/wp-json/better-rest-endpoints/v1/page/home`)
+          .then(response => {
+            this.home = response.data
+          })
+      }
+    },
+    created() {
+      this.getHomePage()
+    },
   }
-}
 </script>
