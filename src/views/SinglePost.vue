@@ -48,7 +48,7 @@
 
 <style lang="scss">
 .single-post {
-  max-width: 1200px;
+  
   border: 1px solid black;
   margin: auto;
 }
