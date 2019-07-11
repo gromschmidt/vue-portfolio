@@ -1,6 +1,6 @@
 <template>
   <div class="all-posts-wrap">
-    <h2>Projekte</h2>
+    <h2 >Projekte</h2>
     <div class="all-posts" v-masonry gutter="16" origin-left="false" 
       item-selector=".post-card">
       <div v-masonry-tile class="post-card" v-for="(post) in posts" :key="post.id">
@@ -78,12 +78,14 @@
     margin: auto;
     position: relative;
     margin-top: 5rem;
+    background: white;
+    padding-top: 4rem;
 
     h2 {
       position: absolute;
       text-transform: uppercase;
       font-size: 3rem;
-      top: 0px;
+      top: 4rem;
       left: 0;
       font-weight: 900;
       letter-spacing: 10px;
